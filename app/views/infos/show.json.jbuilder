@@ -1,0 +1,1 @@
+json.extract! @info, :id, :first_name, :last_name, :father_name, :DOB, :DOJ, :Expericence, :prevoius_company, :address, :contact_no, :Reference_contact_no, :sallry, :probation, :created_at, :updated_at

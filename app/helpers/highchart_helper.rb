@@ -1,0 +1,2 @@
+module HighchartHelper
+end

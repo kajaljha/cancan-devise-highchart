@@ -1,0 +1,85 @@
+<%= form_for(@info) do |f| %>
+  <% if @info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@info.errors.count, "error") %> prohibited this info from being saved:</h2>
+
+      <ul>
+      <% @info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :father_name %><br>
+    <%= f.text_field :father_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Date_Of_Birth %><br>
+    <%= f.date_select :DOB ,order: [:year,:month,:day], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Date_of_Joining %><br>
+    <%= f.date_select :DOJ ,order: [:year,:month,:day,], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 7, end_year: Date.today.year - 100 %>
+  </div>
+
+  <div class="field">
+    <%#= simple_form_for @info do |f| %>
+    <%= f.label :Expericence %><br>
+    <%= f.select :Expericence, (["Expericence","Fresher"])%>
+  </div>
+
+  <div class="field">
+    <%= f.label :prevoius_company %><br>
+    <%= f.text_field :prevoius_company %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contact_no %><br>
+    <%= f.number_field :contact_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Reference_contact_no %><br>
+    <%= f.number_field :Reference_contact_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sallry%><br>
+    <%= f.number_field :sallry%>
+
+    <%= f.check_box_tag(:per_annum) %>
+    <%= f.label_tag(:per_annum, "per annum") %>
+    <%= f.check_box_tag(:per_month) %>
+    <%= f.label_tag(:per_month, "per month") %>
+  </div>
+
+  <div class="field">
+    <%= f.label :probation %><br>
+    <%= f.select :probation, (["probation","Training","Contirned"])%>
+    
+  </div>
+  <div class="actions">
+    <%= f.submit class: "btn btn-default btn-warning"  %>
+    <%= link_to t('.back', :default => t("helpers.links.back")),
+              infos_path, :class => 'btn btn-success'  %>
+  </div>
+<% end %>

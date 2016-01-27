@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  father_name: MyString
+  DOB: 1
+  DOJ: 1
+  Expericence/fresher: MyString
+  prevoius_company: MyString
+  address: MyString
+  contact_no: 1
+  Reference_contact_no: 1
+  sallry/annum: 1
+  probation/training/permanant: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  father_name: MyString
+  DOB: 1
+  DOJ: 1
+  Expericence/fresher: MyString
+  prevoius_company: MyString
+  address: MyString
+  contact_no: 1
+  Reference_contact_no: 1
+  sallry/annum: 1
+  probation/training/permanant: MyString
